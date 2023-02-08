@@ -35,9 +35,9 @@ To insert key4 into the table, first compute the hash function as below:
          
  
 Key4 needs to be inserted in the table, hash function returns the last two bits as 10. Using a 2 bits depth in the directory, key4 will map to index 10 and corresponding to the Bucket A. Bucket A is already full (due to max size =1), so it must be splitted. Because there is more than one pointer to the Bucket A, there is no need to increase the directory size. To perform such operations, some rules are defined:
--The hash function returns binary representation of a given key (bk). The last N bits of bk shows the directory (table) size (i.e., the global depth).
--The previously used the global depth value of a bucket is created shows the local depth of this bucket.
--The number of directory entries is equal to 2^global depth, and the initial number of buckets is equal to 2^local depth
+- The hash function returns binary representation of a given key (bk). The last N bits of bk shows the directory (table) size (i.e., the global depth).
+- The previously used the global depth value of a bucket is created shows the local depth of this bucket.
+- The number of directory entries is equal to 2^global depth, and the initial number of buckets is equal to 2^local depth
 
 ![image](https://user-images.githubusercontent.com/74301873/217535298-bf0feccc-025e-44cd-af70-01e15b95cf0e.png)
 
