@@ -8,6 +8,7 @@
 - When a word is searched in the hash table; key, count, and index of the word should be printed. (Global and local depths should also be printed)
 
 # The Hash table should look like as below:
+
 ![image](https://user-images.githubusercontent.com/74301873/217533590-c2aedf52-4282-4266-af23-df18b2819212.png)
 
 # A HASHING ALGORITHM
@@ -18,6 +19,7 @@ Example keys:
       hc(key2) = 011010
       hc(key3) = 011011
 Let's assume that for this example, the bucket size is 1. Key1 and Key2 can be distinguished by their last bit; they will be inserted into the table as follows:
+
 ![image](https://user-images.githubusercontent.com/74301873/217533889-7eb9fcc3-c974-48fb-bf17-71e898e6c6fe.png)
 
 Note: A and B are only names of buckets. For next examples C, D, and E will be also bucket names. You don’t have to put a name to a bucket in your codes.
@@ -40,6 +42,7 @@ Key4 needs to be inserted in the table, hash function returns the last two bits 
 ![image](https://user-images.githubusercontent.com/74301873/217535298-bf0feccc-025e-44cd-af70-01e15b95cf0e.png)
 
 When a bucket becomes full:
+
 a) If (global depth - local depth) = 0, then 2^0 = 1, one pointer shows to one bucket. The directory size will be doubled.
 b) If (global depth - local depth) > 0, a new bucket will be created, and the entries in the old bucket will re-distributed between the old and new bucket.
 
